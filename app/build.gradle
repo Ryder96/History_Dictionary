@@ -3,9 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 19
     buildToolsVersion "21.1.1"
-
     defaultConfig {
-        applicationId "andres.it.dizionariostorico"
+        applicationId 'andres.it.history.dictionary'
         minSdkVersion 19
         targetSdkVersion 21
         versionCode 1
@@ -20,6 +19,8 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
     }
 }
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-5b19e3b0cadc3c8f0ad95121d7904e78164364a2.jar"
+        jar="/home/ryder/Documenti/Programmazione/android-studio/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/classes-6983921307324ebb5f7a17ee14fe3b3d7c241333.jar"
+        jar="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/classes-8285dc241f7a6fb3c8479212cdc47d46bdc4422a.jar"
+        jar="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/gson-2.2.4-487499e258949fd3af08c42e4352425d21ac4edf.jar"
+        jar="/home/ryder/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-38e2bddc612625408874e71e3b196652812115a4.jar"
+        jar="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/pre-dexed/debug/classes-42e1a16d98074c1f5e8edac6ca2d11849ed5c7d4.jar"
+        jar="/home/ryder/AndroidStudioProjects/DizionarioStorico/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2"/>
+
+</pre-dex-items>

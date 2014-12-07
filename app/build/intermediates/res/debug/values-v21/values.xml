@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/src/main/res/values-v21/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
+    </style>
+</resources>

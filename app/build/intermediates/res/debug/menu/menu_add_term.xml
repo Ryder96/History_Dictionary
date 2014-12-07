@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="andres.it.historyDictionary.Activities.addTermActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" />
+</menu>
+<!-- From: file:/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/src/main/res/menu/menu_add_term.xml -->

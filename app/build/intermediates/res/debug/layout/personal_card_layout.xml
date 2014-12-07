@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/personal_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    cardView:cardBackgroundColor="@color/cardview_dark_background"
+    cardView:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/termine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Termine"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/termine"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Ciao a tutti!. Come va la vita ? il mio nome è Andres Loaiza"
+            android:textColor="#FFFFFF" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView><!-- From: file:/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/src/main/res/layout/personal_card_layout.xml -->

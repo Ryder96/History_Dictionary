@@ -7,11 +7,11 @@ import andres.it.historyDictionary.Interfaces.Term;
  */
 public class ReligiousTerm implements Term {
 
+    private static int ID;
     private String name;
     private String description;
-    private static int ID;
 
-    public ReligiousTerm(String name,String desc){
+    public ReligiousTerm(String name, String desc) {
         this.name = name;
         this.description = desc;
         ++ID;

@@ -68,16 +68,16 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context,DescriptionActivity.class);
-                    switch (vName.getText().toString()){
+                    Intent intent = new Intent(context, DescriptionActivity.class);
+                    switch (vName.getText().toString()) {
                         case "Cultura":
-                            intent.putExtra("TypeOfTerm",vName.getText().toString());
+                            intent.putExtra("TypeOfTerm", vName.getText().toString());
                             break;
                         case "Politica":
-                            intent.putExtra("TypeOfTerm",vName.getText().toString());
+                            intent.putExtra("TypeOfTerm", vName.getText().toString());
                             break;
                         case "Religione":
-                            intent.putExtra("TypeOfTerm",vName.getText().toString());
+                            intent.putExtra("TypeOfTerm", vName.getText().toString());
                             break;
 
                     }

@@ -1,6 +1,5 @@
 package andres.it.historyDictionary.ListItems;
 
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -25,22 +25,23 @@ import andres.it.historyDictionary.TypeTerm.ReligiousTerm;
 public class MainActivity extends Activity {
 
 
-    ImageAdapter mAdapter;
-    RecyclerView mRecyclerView;
-
     private final String KEYSP = "DizionarioAndres";
     private final String KEYCL = "Lista termini cultura";
     private final String KEYPL = "Lista termini politica";
     private final String KEYRL = "Lista termini religione";
-
-
+    private final String KEYFA = "Primo accesso";
+    ImageAdapter mAdapter;
+    RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loadPreferences();
+
+        boolean controlFA = getSharedPreferences(KEYSP, MODE_PRIVATE).getBoolean(KEYFA, true);
+        if (!controlFA)
+            loadPreferences();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.cardList);
         mRecyclerView.setHasFixedSize(true);
@@ -53,13 +54,11 @@ public class MainActivity extends Activity {
         mRecyclerView.setAdapter(mAdapter);
 
 
-
-
     }
 
 
-    private void savePrefereces(){
-        SharedPreferences sharedPreferences = getSharedPreferences(KEYSP,MODE_PRIVATE);
+    private void savePrefereces() {
+        SharedPreferences sharedPreferences = getSharedPreferences(KEYSP, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         Gson gson = new Gson();
@@ -69,50 +68,55 @@ public class MainActivity extends Activity {
         String religiousJson = gson.toJson(ListReligiousTerms.religiousTerms);
 
 
-        editor.putString(KEYCL,cultureJson);
-        editor.putString(KEYPL,politicJson);
-        editor.putString(KEYRL,religiousJson);
+        editor.putString(KEYCL, cultureJson);
+        editor.putString(KEYPL, politicJson);
+        editor.putString(KEYRL, religiousJson);
+        editor.putBoolean(KEYFA, false);
+
 
         editor.commit();
     }
 
-    private void loadPreferences(){
+    private void loadPreferences() {
         SharedPreferences sharedPreferences = getSharedPreferences(KEYSP, MODE_PRIVATE);
 
         Gson gson = new Gson();
 
-        Type culturalType = new TypeToken< ArrayList<CultureTerm>>(){}.getType();
-        Type politicType = new TypeToken<ArrayList<PoliticTerm>>(){}.getType();
-        Type religiousType = new TypeToken<ArrayList<ReligiousTerm>>(){}.getType();
+        Type culturalType = new TypeToken<ArrayList<CultureTerm>>() {
+        }.getType();
+        Type politicType = new TypeToken<ArrayList<PoliticTerm>>() {
+        }.getType();
+        Type religiousType = new TypeToken<ArrayList<ReligiousTerm>>() {
+        }.getType();
 
         ListCultureTerms.cultureTerms.clear();
+        ListPolitcTerms.politicTerms.clear();
+        ListReligiousTerms.religiousTerms.clear();
 
-        String cultureJson = sharedPreferences.getString(KEYCL,"");
-        String politicJson = sharedPreferences.getString(KEYPL,"");
-        String religiousJson = sharedPreferences.getString(KEYRL,"");
+        String cultureJson = sharedPreferences.getString(KEYCL, "");
+        String politicJson = sharedPreferences.getString(KEYPL, "");
+        String religiousJson = sharedPreferences.getString(KEYRL, "");
 
 
+        ListCultureTerms.cultureTerms = gson.fromJson(cultureJson, culturalType);
+        ListPolitcTerms.politicTerms = gson.fromJson(politicJson, politicType);
+        ListReligiousTerms.religiousTerms = gson.fromJson(religiousJson, religiousType);
 
-        ListCultureTerms.cultureTerms = gson.fromJson(cultureJson,culturalType);
-        ListPolitcTerms.politicTerms = gson.fromJson(politicJson,politicType);
-        ListReligiousTerms.religiousTerms = gson.fromJson(religiousJson,religiousType);
+
     }
 
 
-
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
         savePrefereces();
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
         savePrefereces();
     }
-
-
 
 
 }

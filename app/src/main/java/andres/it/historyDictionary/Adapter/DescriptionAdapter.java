@@ -2,12 +2,10 @@ package andres.it.historyDictionary.Adapter;
 
 import android.app.ActionBar;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 
 import andres.it.dizionario.storico.R;
 import andres.it.historyDictionary.ListItems.ListCultureTerms;
@@ -19,10 +17,10 @@ import andres.it.historyDictionary.ListItems.ListReligiousTerms;
  */
 public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.DescriptionViewHolder> {
 
-    private final String LogAdapter = "LogAdpater";
 
     private String termRequested;
     private ActionBar myActionBar;
+
     public DescriptionAdapter(String termRequested, ActionBar actionBar) {
         this.termRequested = termRequested;
         this.myActionBar = actionBar;
@@ -39,7 +37,7 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
     @Override
     public void onBindViewHolder(DescriptionViewHolder descriptionViewHolder, int i) {
 
-        switch (termRequested){
+        switch (termRequested) {
             case "Cultura":
                 descriptionViewHolder.vTermine.setText(ListCultureTerms.cultureTerms.get(i).getName());
                 descriptionViewHolder.vDescription.setText(ListCultureTerms.cultureTerms.get(i).getDescription());
@@ -52,7 +50,7 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
                 descriptionViewHolder.vTermine.setText(ListReligiousTerms.religiousTerms.get(i).getName());
                 descriptionViewHolder.vDescription.setText(ListReligiousTerms.religiousTerms.get(i).getDescription());
                 break;
-            default :
+            default:
                 break;
         }
 
@@ -61,7 +59,7 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
     @Override
     public int getItemCount() {
         int size = 0;
-        switch (termRequested){
+        switch (termRequested) {
             case "Cultura":
                 myActionBar.setTitle("Cultura");
                 size = ListCultureTerms.cultureTerms.size();
@@ -70,13 +68,13 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
 
                 myActionBar.setTitle("Politica");
                 size = ListPolitcTerms.politicTerms.size();
-               break;
+                break;
             case "Religione":
 
                 myActionBar.setTitle("Religione");
                 size = ListReligiousTerms.religiousTerms.size();
                 break;
-            default :
+            default:
                 break;
         }
 

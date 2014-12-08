@@ -18,6 +18,7 @@ public class DescriptionActivity extends Activity {
     private Button myButton;
 
     private String title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class DescriptionActivity extends Activity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mAdapter = new DescriptionAdapter(title,getActionBar());
+        mAdapter = new DescriptionAdapter(title, getActionBar());
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -48,8 +49,8 @@ public class DescriptionActivity extends Activity {
     }
 
     private void addNewTerm() {
-        Intent intent = new Intent(this,addTermActivity.class);
-        intent.putExtra("IDTerm",title);
+        Intent intent = new Intent(this, addTermActivity.class);
+        intent.putExtra("IDTerm", title);
         startActivity(intent);
     }
 

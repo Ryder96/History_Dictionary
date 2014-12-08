@@ -5,7 +5,7 @@ package andres.it.historyDictionary.ListItems;
  */
 public class TypeTerms {
 
-    public final static String[] TERMS = {"Cultura","Politica","Religione"};
+    public final static String[] TERMS = {"Cultura", "Politica", "Religione"};
 
 
 }

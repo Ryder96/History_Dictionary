@@ -6,11 +6,11 @@ import andres.it.historyDictionary.Interfaces.Term;
  * Created by ryder on 08/12/14.
  */
 public class CultureTerm implements Term {
+    private static int ID;
     private String name;
     private String description;
-    private static int ID;
 
-    public CultureTerm(String name,String desc){
+    public CultureTerm(String name, String desc) {
         this.name = name;
         this.description = desc;
         ++ID;

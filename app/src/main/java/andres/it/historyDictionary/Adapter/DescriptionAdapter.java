@@ -2,6 +2,7 @@ package andres.it.historyDictionary.Adapter;
 
 import android.app.ActionBar;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +10,16 @@ import android.widget.TextView;
 
 
 import andres.it.dizionario.storico.R;
+import andres.it.historyDictionary.ListItems.ListCultureTerms;
+import andres.it.historyDictionary.ListItems.ListPolitcTerms;
+import andres.it.historyDictionary.ListItems.ListReligiousTerms;
 
 /**
  * Created by ryder on 02/12/14.
  */
 public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.DescriptionViewHolder> {
 
+    private final String LogAdapter = "LogAdpater";
 
     private String termRequested;
     private ActionBar myActionBar;
@@ -32,17 +37,20 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
     }
 
     @Override
-    public void onBindViewHolder(DescriptionViewHolder imageViewHolder, int i) {
+    public void onBindViewHolder(DescriptionViewHolder descriptionViewHolder, int i) {
 
         switch (termRequested){
             case "Cultura":
-                myActionBar.setTitle("Cultura");
+                descriptionViewHolder.vTermine.setText(ListCultureTerms.cultureTerms.get(i).getName());
+                descriptionViewHolder.vDescription.setText(ListCultureTerms.cultureTerms.get(i).getDescription());
                 break;
             case "Politica":
-                myActionBar.setTitle("Politica");
+                descriptionViewHolder.vTermine.setText(ListPolitcTerms.politicTerms.get(i).getName());
+                descriptionViewHolder.vDescription.setText(ListPolitcTerms.politicTerms.get(i).getDescription());
                 break;
             case "Religione":
-                myActionBar.setTitle("Religione");
+                descriptionViewHolder.vTermine.setText(ListReligiousTerms.religiousTerms.get(i).getName());
+                descriptionViewHolder.vDescription.setText(ListReligiousTerms.religiousTerms.get(i).getDescription());
                 break;
             default :
                 break;
@@ -52,17 +60,39 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
 
     @Override
     public int getItemCount() {
-        return 1;
+        int size = 0;
+        switch (termRequested){
+            case "Cultura":
+                myActionBar.setTitle("Cultura");
+                size = ListCultureTerms.cultureTerms.size();
+                break;
+            case "Politica":
+
+                myActionBar.setTitle("Politica");
+                size = ListPolitcTerms.politicTerms.size();
+               break;
+            case "Religione":
+
+                myActionBar.setTitle("Religione");
+                size = ListReligiousTerms.religiousTerms.size();
+                break;
+            default :
+                break;
+        }
+
+        return size;
     }
 
 
     public class DescriptionViewHolder extends RecyclerView.ViewHolder {
 
-        protected TextView vName;
+        protected TextView vTermine;
+        protected TextView vDescription;
 
         public DescriptionViewHolder(final View itemView) {
             super(itemView);
-            vName = (TextView) itemView.findViewById(R.id.description);
+            vTermine = (TextView) itemView.findViewById(R.id.tvTermine);
+            vDescription = (TextView) itemView.findViewById(R.id.tvDescription);
 
         }
 

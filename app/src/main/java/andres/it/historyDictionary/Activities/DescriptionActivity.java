@@ -13,7 +13,7 @@ import andres.it.historyDictionary.Adapter.DescriptionAdapter;
 
 public class DescriptionActivity extends Activity {
 
-    private DescriptionAdapter mAdapter;
+    public static DescriptionAdapter mAdapter;
     private RecyclerView mRecyclerView;
     private Button myButton;
 
@@ -33,6 +33,7 @@ public class DescriptionActivity extends Activity {
 
         mAdapter = new DescriptionAdapter(title,getActionBar());
         mRecyclerView.setAdapter(mAdapter);
+
 
         myButton = (Button) findViewById(R.id.bAddTerm);
 

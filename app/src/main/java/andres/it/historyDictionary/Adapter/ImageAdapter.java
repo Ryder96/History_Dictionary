@@ -26,9 +26,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         for (int i = 0; i < TypeTerms.TERMS.length; ++i)
             terms.add(TypeTerms.TERMS[i]);
 
-        images.add(R.drawable.medieval);
-        images.add(R.drawable.card_background1);
-        images.add(R.drawable.ic_launcher);
+        images.add(R.drawable.cultura);
+        images.add(R.drawable.politica);
+        images.add(R.drawable.religione);
         this.context = context;
     }
 

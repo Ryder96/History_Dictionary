@@ -13,7 +13,7 @@
 
 
         <TextView
-            android:id="@+id/termine"
+            android:id="@+id/tvTermine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -23,10 +23,10 @@
             android:textColor="#FFFFFF" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/termine"
+            android:layout_below="@+id/tvTermine"
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="Ciao a tutti!. Come va la vita ? il mio nome è Andres Loaiza"

@@ -1,10 +1,13 @@
 package andres.it.historyDictionary.Activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -30,8 +33,10 @@ public class MainActivity extends Activity {
     private final String KEYPL = "Lista termini politica";
     private final String KEYRL = "Lista termini religione";
     private final String KEYFA = "Primo accesso";
+
     ImageAdapter mAdapter;
     RecyclerView mRecyclerView;
+    ImageButton mImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +58,20 @@ public class MainActivity extends Activity {
         mAdapter = new ImageAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
 
+        mImageButton = (ImageButton) findViewById(R.id.ibInfo);
+        mImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToCopyright();
+            }
+        });
 
+
+    }
+
+    private void goToCopyright() {
+        Intent intent = new Intent(this,CopyrightActivity.class);
+        startActivity(intent);
     }
 
 

@@ -134,42 +134,56 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int cultura=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int ic_launcher_history=0x7f020002;
-        public static final int medieval=0x7f020003;
-        public static final int politica=0x7f020004;
-        public static final int politics=0x7f020005;
-        public static final int religione=0x7f020006;
+        public static final int ic_action_done=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int ic_launcher_history=0x7f020003;
+        public static final int ic_navigation_close=0x7f020004;
+        public static final int medieval=0x7f020005;
+        public static final int politica=0x7f020006;
+        public static final int politics=0x7f020007;
+        public static final int religione=0x7f020008;
     }
     public static final class id {
         public static final int bAddTerm=0x7f080008;
         public static final int bDone=0x7f080006;
         public static final int cardList=0x7f080009;
-        public static final int card_view=0x7f08000a;
+        public static final int card_view=0x7f080012;
         public static final int descriptionCardList=0x7f080007;
         public static final int descriptionCardView=0x7f080004;
         public static final int descriptionCardViewBackground=0x7f080000;
         public static final int etDefinitionOfTerm=0x7f080005;
         public static final int etNameTerm=0x7f080002;
-        public static final int imageView=0x7f08000c;
-        public static final int personal_card=0x7f08000d;
+        public static final int etmDesc=0x7f08000f;
+        public static final int etmTerm=0x7f08000c;
+        public static final int ibBack=0x7f080011;
+        public static final int ibDone=0x7f080010;
+        public static final int imageView=0x7f080014;
+        public static final int personal_card=0x7f080015;
+        public static final int textView=0x7f08000b;
         public static final int textView3=0x7f080003;
-        public static final int tvDescription=0x7f08000f;
-        public static final int tvTermine=0x7f08000e;
-        public static final int twSubtitle=0x7f08000b;
+        public static final int tvDescription=0x7f080017;
+        public static final int tvTermine=0x7f080016;
+        public static final int tvmDesc=0x7f08000d;
+        public static final int twSubtitle=0x7f080013;
         public static final int twTitle=0x7f080001;
+        public static final int twmTerm=0x7f08000a;
+        public static final int view=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_add_term=0x7f030000;
         public static final int activity_description=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int card__main_layout=0x7f030003;
-        public static final int personal_card_layout=0x7f030004;
+        public static final int activity_term=0x7f030003;
+        public static final int card__main_layout=0x7f030004;
+        public static final int personal_card_layout=0x7f030005;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
-        public static final int title_activity_add_term=0x7f060001;
-        public static final int title_activity_description=0x7f060002;
+        public static final int action_settings=0x7f060000;
+        public static final int app_name=0x7f060001;
+        public static final int hello_world=0x7f060002;
+        public static final int title_activity_add_term=0x7f060003;
+        public static final int title_activity_description=0x7f060004;
+        public static final int title_activity_term=0x7f060005;
     }
     public static final class style {
         public static final int AppTheme=0x7f070000;

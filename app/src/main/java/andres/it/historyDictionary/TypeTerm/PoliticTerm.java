@@ -7,19 +7,18 @@ import andres.it.historyDictionary.Interfaces.Term;
  */
 public class PoliticTerm implements Term {
 
-    private static int ID;
     private String name;
     private String description;
 
     public PoliticTerm(String name, String desc) {
         this.name = name;
         this.description = desc;
-        ++ID;
+
     }
 
 
     public int getID() {
-        return ID;
+        return 0;
     }
 
 
@@ -29,5 +28,13 @@ public class PoliticTerm implements Term {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

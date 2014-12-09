@@ -7,19 +7,17 @@ import andres.it.historyDictionary.Interfaces.Term;
  */
 public class ReligiousTerm implements Term {
 
-    private static int ID;
     private String name;
     private String description;
 
     public ReligiousTerm(String name, String desc) {
         this.name = name;
         this.description = desc;
-        ++ID;
     }
 
     @Override
     public int getID() {
-        return ID;
+        return 0;
     }
 
     @Override
@@ -30,5 +28,13 @@ public class ReligiousTerm implements Term {
     @Override
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

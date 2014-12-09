@@ -32,7 +32,7 @@ public class DescriptionActivity extends Activity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mAdapter = new DescriptionAdapter(title, getActionBar());
+        mAdapter = new DescriptionAdapter(title, getActionBar(),this);
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -44,6 +44,8 @@ public class DescriptionActivity extends Activity {
                 addNewTerm();
             }
         });
+
+
 
 
     }

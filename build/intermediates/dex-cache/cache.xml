@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/home/ryder/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/build/intermediates/pre-dexed/debug/gson-2.2.4-487499e258949fd3af08c42e4352425d21ac4edf.jar" />
+    </item>
+    <item
         jar="/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.2/classes.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -21,13 +28,6 @@
         revision="21.1.1"
         sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
         <dex dex="/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/build/intermediates/pre-dexed/debug/classes-1e2b14ad0b37b9675a0f89a3f940d9dfd8e3a403.jar" />
-    </item>
-    <item
-        jar="/home/ryder/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/build/intermediates/pre-dexed/debug/gson-2.2.4-487499e258949fd3af08c42e4352425d21ac4edf.jar" />
     </item>
     <item
         jar="/home/ryder/Documenti/AndroidStudioProjects/History_Dictionary/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.2/classes.jar"

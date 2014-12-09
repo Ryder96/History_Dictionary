@@ -1,6 +1,12 @@
 package andres.it.historyDictionary.Adapter;
 
 import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import andres.it.dizionario.storico.R;
+import andres.it.historyDictionary.Activities.TermActivity;
+import andres.it.historyDictionary.Dialogs.DeleteTerm;
 import andres.it.historyDictionary.ListItems.ListCultureTerms;
 import andres.it.historyDictionary.ListItems.ListPolitcTerms;
 import andres.it.historyDictionary.ListItems.ListReligiousTerms;
@@ -20,10 +28,12 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
 
     private String termRequested;
     private ActionBar myActionBar;
+    protected Context context;
 
-    public DescriptionAdapter(String termRequested, ActionBar actionBar) {
+    public DescriptionAdapter(String termRequested, ActionBar actionBar,Context context) {
         this.termRequested = termRequested;
         this.myActionBar = actionBar;
+        this.context = context;
     }
 
     @Override
@@ -49,6 +59,7 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
             case "Religione":
                 descriptionViewHolder.vTermine.setText(ListReligiousTerms.religiousTerms.get(i).getName());
                 descriptionViewHolder.vDescription.setText(ListReligiousTerms.religiousTerms.get(i).getDescription());
+
                 break;
             default:
                 break;
@@ -91,6 +102,30 @@ public class DescriptionAdapter extends RecyclerView.Adapter<DescriptionAdapter.
             super(itemView);
             vTermine = (TextView) itemView.findViewById(R.id.tvTermine);
             vDescription = (TextView) itemView.findViewById(R.id.tvDescription);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, TermActivity.class);
+                    intent.putExtra("Term",vTermine.getText().toString());
+                    intent.putExtra("Description",vDescription.getText().toString());
+                    intent.putExtra("Type",termRequested);
+                    context.startActivity(intent);
+                }
+            });
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+
+                    DeleteTerm mDialog = new DeleteTerm();
+                    Activity a = (Activity) context;
+                    mDialog.setTypeTerm(termRequested);
+                    mDialog.setTermToDelete(vTermine.getText().toString());
+                    mDialog.show(a.getFragmentManager(),"CIAO");
+                    return false;
+                }
+            });
 
         }
 

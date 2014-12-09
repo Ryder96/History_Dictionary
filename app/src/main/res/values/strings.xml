@@ -4,5 +4,8 @@
     <string name="app_name">Dizionario Storico</string>
     <string name="title_activity_description">DescriptionActivity</string>
     <string name="title_activity_add_term">Aggiungi Termine</string>
+    <string name="title_activity_term">TermActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
